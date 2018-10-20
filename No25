@@ -1,0 +1,101 @@
+//Prime number
+using System;
+namespace PrimeNumber
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int c = 2;
+
+            while (c < 100)
+            {
+                if (p(c))
+                {
+                    Console.WriteLine(c);
+                }
+                c++;
+            }
+        }
+
+        public static bool p(int c)
+        {
+            for (int i = 2; i < c; i++)
+                if (c % i == 0)
+                    return false;
+            return true;
+        }
+    }
+}
+
+
+//pascal
+using System;
+namespace PascalTriangle
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int r = 20;
+           
+            for (int i = 0; i < r; i++)
+            {
+                for (int s = 1; s <= r - i; s++)
+                    Console.Write(" ");
+
+                int n = 1;
+                for (int c = 0; c <= i; c++)
+                {
+                    Console.Write(" " + n);
+                    n = n * (i - c) / (c + 1);
+                }
+                Console.WriteLine("");
+            }
+        }
+    }
+}
+
+//FuzzBuzz
+using System;
+
+namespace FizzBuzzTest
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int c = 0;
+            while (c < 100)
+            {
+                c++;
+
+                if ((c % 5) == 0 && (c % 3 == 0))
+                {
+                    Console.WriteLine("FizBuzz");
+                    continue;
+
+                }
+
+
+                if ((c % 3 == 0))
+                {
+                    Console.WriteLine("Fizz");
+                    continue;
+                }
+
+
+                if ((c % 5) == 0)
+                {
+                    Console.WriteLine("Buzz");
+                    continue;
+                }
+
+                Console.WriteLine(c);
+                
+            }
+        }
+    }
+}
+
