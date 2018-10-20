@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <input [(ngModel)]="val" type="number" (keyup.enter)="compare()">
+</div>
+
+
+<div>
+  <button (click)="computerCheck('SMALLER')" > < </button>
+  <button (click)="computerCheck('BIGGER')"> > </button>
+  <button (click)="computerCheck('EQUALS')" > = </button>
+  <button (click)="computerCheck()"> START </button>
+</div>
+<div>
+  {{computeNum}}
+</div>
+
+<div>
+  {{result}}
+</div>
